@@ -23,6 +23,9 @@ head(aggregated_data)
 
 contingency_table <- xtabs(Total_Revenue ~ Product_Category + Region, data = aggregated_data)
 contingency_table
+
+barplot(as.matrix(contingency_table))
+
 chi_square_result <- chisq.test(contingency_table)
 chi_square_result
 
