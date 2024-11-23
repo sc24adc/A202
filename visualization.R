@@ -6,10 +6,11 @@ update.packages()
 
 install.packages("ggplot2")
 library(ggplot2)
-install.packages("C:/path/to/ggplot2_3.5.1.zip", repos = NULL, type = "win.binary")
+#install.packages("C:/path/to/ggplot2_3.5.1.zip", repos = NULL, type = "win.binary")#
 
 data<-read.csv("Sales_Product_Details.csv")
 head(data,2)
+
 
 install.packages("magrittr")
 library(magrittr)
@@ -35,18 +36,33 @@ install.packages("ggplot2")
 
 library(ggplot2)
 
+<<<<<<< HEAD
 update.packages(ask = FALSE, checkBuilt = TRUE)install.packages("ggplot2.utils")
+=======
+update.packages(ask = FALSE, checkBuilt = TRUE)
+install.packages("ggplot2.utils")
+>>>>>>> e9619b2f93787bb9a9eea1be0e9d330d268a7db0
 
 ggplot(aggregated_data, aes(x = Region, y = Proportion, fill = Product_Category)) +
+  
   geom_bar(stat = "identity", position = "dodge") +
+  
   labs(title = "Sales Revenue Proportions by Region and Product Category",
        x = "Region", y = "Proportion of Sales Revenue") +
   
   theme_minimal()
 
+<<<<<<< HEAD
 install.packages("reshape2")
 
 library(reshape2) 
+=======
+summary(data)
+
+install.packages("reshape2")
+
+library(reshape2)
+>>>>>>> e9619b2f93787bb9a9eea1be0e9d330d268a7db0
 
 heatmap_data <- dcast(aggregated_data, Region ~ Product_Category, value.var = "Proportion", fill = 0)
 heatmap_data_matrix <- as.matrix(heatmap_data[,-1])
