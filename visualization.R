@@ -6,7 +6,7 @@ update.packages()
 
 install.packages("ggplot2")
 library(ggplot2)
-install.packages("C:/path/to/ggplot2_3.5.1.zip", repos = NULL, type = "win.binary")
+#install.packages("C:/path/to/ggplot2_3.5.1.zip", repos = NULL, type = "win.binary")#
 
 data<-read.csv("Sales_Product_Details.csv")
 head(data,2)
@@ -37,16 +37,25 @@ library(ggplot2)
 .rs.restartR()
 
 install.packages("ggplot2")
+
 library(ggplot2)
-update.packages(ask = FALSE, checkBuilt = TRUE)install.packages("ggplot2.utils")
+
+update.packages(ask = FALSE, checkBuilt = TRUE)
+install.packages("ggplot2.utils")
 
 ggplot(aggregated_data, aes(x = Region, y = Proportion, fill = Product_Category)) +
+  
   geom_bar(stat = "identity", position = "dodge") +
+  
   labs(title = "Sales Revenue Proportions by Region and Product Category",
        x = "Region", y = "Proportion of Sales Revenue") +
+  
   theme_minimal()
+
 summary(data)
+
 install.packages("reshape2")
+
 library(reshape2)
 
 heatmap_data <- dcast(aggregated_data, Region ~ Product_Category, value.var = "Proportion", fill = 0)
