@@ -11,6 +11,7 @@ install.packages("C:/path/to/ggplot2_3.5.1.zip", repos = NULL, type = "win.binar
 data<-read.csv("Sales_Product_Details.csv")
 head(data,2)
 
+
 install.packages("magrittr")
 library(magrittr)
 
@@ -44,8 +45,10 @@ ggplot(aggregated_data, aes(x = Region, y = Proportion, fill = Product_Category)
   labs(title = "Sales Revenue Proportions by Region and Product Category",
        x = "Region", y = "Proportion of Sales Revenue") +
   theme_minimal()
+summary(data)
 install.packages("reshape2")
-library(reshape2) 
+library(reshape2)
+
 heatmap_data <- dcast(aggregated_data, Region ~ Product_Category, value.var = "Proportion", fill = 0)
 heatmap_data_matrix <- as.matrix(heatmap_data[,-1])
 heatmap_data_matrix
