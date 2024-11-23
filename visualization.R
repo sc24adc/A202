@@ -32,16 +32,20 @@ chi_square_result
 .rs.restartR()
 
 install.packages("ggplot2")
+
 library(ggplot2)
+
 update.packages(ask = FALSE, checkBuilt = TRUE)install.packages("ggplot2.utils")
 
 ggplot(aggregated_data, aes(x = Region, y = Proportion, fill = Product_Category)) +
   geom_bar(stat = "identity", position = "dodge") +
   labs(title = "Sales Revenue Proportions by Region and Product Category",
        x = "Region", y = "Proportion of Sales Revenue") +
+  
   theme_minimal()
 
 install.packages("reshape2")
+
 library(reshape2) 
 
 heatmap_data <- dcast(aggregated_data, Region ~ Product_Category, value.var = "Proportion", fill = 0)
