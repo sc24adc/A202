@@ -11,6 +11,8 @@ install.packages("C:/path/to/ggplot2_3.5.1.zip", repos = NULL, type = "win.binar
 data<-read.csv("Sales_Product_Details.csv")
 head(data,2)
 
+hist(data$Sales_Revenue)
+
 install.packages("magrittr")
 library(magrittr)
 
