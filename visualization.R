@@ -45,7 +45,8 @@ library(ggplot2)
 
 install.packages("ggplot2")
 library(ggplot2)
-update.packages(ask = FALSE, checkBuilt = TRUE)install.packages("ggplot2.utils")
+update.packages(ask = FALSE, checkBuilt = TRUE)
+install.packages("ggplot2.utils")
 
 library(ggplot2)
 
